@@ -1,0 +1,33 @@
+.seperator
+  margin: 0 -9999rem
+  /* add back negative margin value */
+  padding: 0.25rem 9999rem
+  background: rgba(0, 0, 0, 0.5)
+  height: 10px
+  margin-bottom: 50px
+  margin-top: 50px
+  //position: relative
+  &::before
+    content: ''
+    display: inline-block
+    height: 100%
+    vertical-align: middle
+    margin-right: -0.05em; /* Adjusts for spacing */
+  &::after
+    border: 1px solid hsla(0, 0%, 100%, 0.2)
+    position: absolute
+    border-radius: 50%
+    content: ""
+    //right: 0
+    top: 50%
+    left: 50%
+    width: 50px
+    height: 50px
+    vertical-align: center
+    display: inline-block
+    line-height: normal
+    -webkit-transform: translateY(25%)
+    -moz-transform: translateY(25%)
+    -ms-transform: translateY(25%)
+    transform: translateY(25%)
+    z-index: 100

@@ -1,0 +1,3 @@
+http://github.hubspot.com/pace/ for page loading
+http://www.cssscript.com/small-javascript-library-particles-animation-particles-js/ particle generator for hero
+http://vincentgarreau.com/particles.js/ to generate particle (create elements with a hover value on the elements)

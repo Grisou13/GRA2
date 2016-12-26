@@ -1,0 +1,54 @@
+// http://codepen.io/chriscoyier/pen/yqHxB
+.bubble-wrapper
+  background-color: transparent
+  border: 1px solid hsla(0, 0%, 100%, 0.2)
+  border-radius: 50%
+  cursor: pointer
+  height: 245px
+  position: relative
+  width: 245px
+  z-index: 1
+  &::after, &::before
+    border-radius: 50%
+    content: ""
+    left: 50%
+    position: absolute
+    top: 50%
+    transform: translate(-50%, -50%)
+  &::after
+    border: 1px solid hsla(0, 0%, 100%, 0.1)
+    height: 400px
+    width: 400px
+  &::before
+    border: 2px solid hsla(0, 0%, 100%, 0.2)
+    height: 260px
+    width: 260px
+
+.bubble-inner
+  &::after, &::before
+    border: 2px solid hsla(0, 0%, 100%, 0.2)
+    border-radius: 50%
+    content: ""
+    height: 260px
+    left: 50%
+    position: absolute
+    top: 50%
+    transform: translate(-50%, -50%)
+    visibility: hidden
+    width: 260px
+
+.bubble-info
+  +textGlitch("bubble-glitch", 17, white, transparent, blue, red, 100, 30)
+  left: 50%
+  position: absolute
+  text-align: center
+  top: 50%
+  transform: translate(-50%, -50%)
+
+.bubble-big-container
+  background-image: url("./../images/circles.svg")
+  background-size: contain
+  color: green
+  background-repeat: no-repeat
+  width: 500px
+  height: 500px
