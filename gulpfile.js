@@ -51,43 +51,44 @@ gulp.task('styles',["fonts"], function() {
           .pipe(sass(sassConfig))
           .on('error', sass.logError)
           .pipe(sourcemaps.write())
-          .pipe(concat('app.css'))
-          .pipe(gulp.dest('./dist/css/'))
+          //.pipe(concat('app.css'))
           .pipe(autoprefix('last 2 version'))
+          .pipe(gulp.dest('./src/css/'))
+
           .pipe(reload({match: '**/*.css',stream:true}));
 });
 
-
-//icons
-gulp.task('fonts', function() { 
-    return gulp.src([paths.fontawesome + "fonts/**.*", paths.bootstrap + "fonts/bootstrap/**.*"]) 
-        .pipe(gulp.dest('./dist/fonts')); 
-});
-gulp.task("images", function(){
-  return gulp.src([paths.images]).pipe(gulp.dest("./dist/images"))
-})
-gulp.task("html", function(){
-  return gulp.src('src/*.html').pipe(gulp.dest('./dist'));
-})
-// Rerun the task when a file changes
-gulp.task('watch', function() {
-  gulp.watch([paths.scripts,paths.styles,paths.html,paths.images],['styles','scripts','html']);
-});
-//browser sync
-gulp.task("server-reload",["html","images"],function(done){
-  browserSync.reload();
-  done();
-})
+//
+// //icons
+// gulp.task('fonts', function() { 
+//     return gulp.src([paths.fontawesome + "fonts/**.*", paths.bootstrap + "fonts/bootstrap/**.*"]) 
+//         .pipe(gulp.dest('./dist/fonts')); 
+// });
+// gulp.task("images", function(){
+//   return gulp.src([paths.images]).pipe(gulp.dest("./dist/images"))
+// })
+// gulp.task("html", function(){
+//   return gulp.src('src/*.html').pipe(gulp.dest('./dist'));
+// })
+// // Rerun the task when a file changes
+// gulp.task('watch', function() {
+//   gulp.watch([paths.scripts,paths.styles,paths.html,paths.images],['styles','scripts','html']);
+// });
+// //browser sync
+// gulp.task("server-reload",["html","images"],function(done){
+//   browserSync.reload();
+//   done();
+// })
 // Static Server + watching scss/html files
 gulp.task('serve', ['styles','scripts'], function() {
 
     browserSync.init({
-        server: "./dist"
+        server: "./src"
     });
 
-    gulp.watch([paths.styles,paths.scripts,paths.html,paths.images]).on('change', browserSync.reload);;
+    //gulp.watch([paths.styles,paths.scripts,paths.html,paths.images]).on('change', browserSync.reload);;
 });
 //deafult task
-gulp.task('default',['styles','fonts','scripts','html','images'],function() {
-
-});
+// gulp.task('default',['styles','fonts','scripts','html','images'],function() {
+//
+// });
