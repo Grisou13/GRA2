@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    <title>GRA1</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body>
+    <div class="nav-fix">
+      <img src="images/circles.svg" class="logo" alt="">
+      <span class="nav-toggle" data-target="#main-nav"><i class="fa fa-caret-left fa-3x"></i></span>
+    </div>
+    <div class="container main">
+        <div class="hero">
+          <canvas id="hero-background" width="800" height="600"></canvas>
+          <div class="text">
+            <p>Bienvenue</p>
+          </div>
+        </div>
+        <div class="bubbles">
+          <div class="bubble" data-text="Filières">
+            <div class="bubble bubble--first" data-text="Meca"><a class="link" href="/filiaire.html#meca"></a></div>
+            <div class="bubble bubble--second" data-text="Info"><a class="link" href="/filiaire.html#info"></a></div>
+            <div class="bubble bubble--third" data-text="System"><a class="link" href="/filiaire.html#system"></a></div>
+          </div>
+          <div class="bubble" data-text="Formations">
+            <div class="bubble bubble--first" data-text="Plan de formation"><a class="link" href="/formation.html"></a></div>
+          </div>
+        </div>
+    </div>
+    <!-- Offscreen nav -->
+    <div id="main-nav" class="nav">
+      <div class="nav-header">
+        <div class="center">
+          <form class="search-form" action="index.html" method="post">
+            <input class="form-element" type="text" name="q" value="">
+            <button class="form-submit" type="submit" name="button"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+        <span class="nav-toggle" data-target="#main-nav"><i class="fa fa-times fa-3x"></i></span>
+      </div>
+      <div class="content center">
+        <a class="link" href="#"></a>
+        <a class="link" href="#"></a>
+      </div>
+    </div>
+    <script type="application/javascript" src="bundle.js" charset="utf-8"></script>
+    </body>
+</html>
