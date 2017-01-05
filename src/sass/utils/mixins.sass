@@ -1,0 +1,36 @@
+//found on https://gist.github.com/fieldoffice/c0a4119f7752a880a638
+// readapted to sass, not that hard...
+// Browser Prefixes
+@mixin transform($transforms)
+	-webkit-transform: $transforms
+	-moz-transform: $transforms
+	-ms-transform: $transforms
+	transform: $transforms
+
+
+// Rotate
+@mixin rotate ($deg)
+	+transform(rotate(#{$deg}deg))
+
+
+// Scale
+@mixin scale($scale)
+	+transform(scale($scale))
+
+
+// Translate
+@mixin translate ($x, $y)
+	+transform(translate($x, $y))
+
+
+// Skew
+@mixin skew ($x, $y)
+	+transform(skew(#{$x}deg, #{$y}deg))
+
+
+// Transform Origin
+@mixin transform-origin ($origin)
+	-webkit-transform-origin: $origin
+	-moz-transform-origin: $origin
+	-ms-transform-origin: $origin
+	transform-origin: $origin

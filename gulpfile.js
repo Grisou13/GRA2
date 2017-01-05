@@ -131,7 +131,7 @@ gulp.task('default', ['copy-fonts',"copy-templates","copy-images", 'sass', "watc
 gulp.task('build', ['copy-fonts',"copy-templates","copy-images", 'sass', 'browserify']);
 //found on https://gist.github.com/cobyism/4730490
 gulp.task("deploy",["build"],function(cb){
-  exec('git add dist && git commit -am "update remote" && git push origin `git subtree split --prefix dist master`:gh-pages --force', function (err, stdout, stderr) {
+  exec('git add dist && git commit -am "update remote" && git subtree push --prefix dist origin gh-pages', function (err, stdout, stderr) {
     console.log(stdout);
     console.log(stderr);
     cb(err);
