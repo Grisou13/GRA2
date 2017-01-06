@@ -26,6 +26,7 @@ var paths = {
   styles:'./src/sass/**/*.+(sass|scss)',
   scripts:'src/js/**/*.+(js|jsx)',
   bootstrap:'./node_modules/bootstrap-sass/assets/',
+  material : "./node_modules/materialize-css/sass",
   fontawesome:'./node_modules/font-awesome/',
   jquery:'./node_modules/jquery/',
   images: './src/images/**/*.*',
@@ -34,7 +35,8 @@ var paths = {
 var sassConfig = {
   style:"nested",
   includePaths :[
-    path.join(__dirname, paths.bootstrap , "/stylesheets/"),
+    //path.join(__dirname, paths.bootstrap , "/stylesheets/"),
+    path.join(__dirname,paths.material)
     path.join(__dirname,paths.fontawesome , "/scss/")
   ]
 }
