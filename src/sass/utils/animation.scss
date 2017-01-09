@@ -1,0 +1,10 @@
+@include keyframes(rotating){
+  0%{
+    @include rotate(0);
+  }
+
+  90%{
+    @include rotate(360);
+  }
+
+}

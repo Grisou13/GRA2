@@ -26,17 +26,18 @@ var paths = {
   styles:'./src/sass/**/*.+(sass|scss)',
   scripts:'src/js/**/*.+(js|jsx)',
   bootstrap:'./node_modules/bootstrap-sass/assets/',
-  material : "./node_modules/materialize-css/sass",
+  material : "./node_modules/materialize-css/",
   fontawesome:'./node_modules/font-awesome/',
   jquery:'./node_modules/jquery/',
   images: './src/images/**/*.*',
   html: './src/**.html'
 }
+
 var sassConfig = {
   style:"nested",
   includePaths :[
     //path.join(__dirname, paths.bootstrap , "/stylesheets/"),
-    path.join(__dirname,paths.material)
+    path.join(__dirname,paths.material,"/sass/"),
     path.join(__dirname,paths.fontawesome , "/scss/")
   ]
 }
@@ -127,7 +128,7 @@ gulp.task("copy-images",function(){
   .pipe(gulp.dest("./dist/images"));
 })
 gulp.task("watch-images",function() {
-  return gulp.watch("./src/*.html",["copy-images"])
+  return gulp.watch("./src/images/*.+(svg|png|jpeg|jpg)",["copy-images"])
 })
 gulp.task('default', ['copy-fonts',"copy-templates","copy-images", 'sass', "watch-templates", "watch-images", 'watch-sass', 'watchify', 'browsersync']);
 gulp.task('build', ['copy-fonts',"copy-templates","copy-images", 'sass', 'browserify']);
