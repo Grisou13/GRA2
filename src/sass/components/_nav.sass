@@ -41,12 +41,16 @@
           opacity: 1
 //on screen nav with logo
 .nav-fix
-  background-image: url("images/logo.png")
   height: 50px
-  & .logo
-    margin-left: auto
-    margin-right: 10px
-    height: inherit
-  & .nav-toggle
-    max-width: 100px
-    max-height: 100px
+  & .content
+    position: relative
+    //background: darken($nav-color,30%)
+    width: 50%
+    height: 200px
+    margin: 20px auto
+    & .logo
+      margin-left: auto
+      margin-right: 10px
+    & .nav-toggle
+      max-width: 100px
+      max-height: 100px
