@@ -5,11 +5,35 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="app.css" />
   </head>
-  <body>
+  <body class="animated fadeIn">
     <div class="nav-fix">
-      <div class="content">
-        <img src="images/logo-cpnv.png" class="logo" alt="">
-        <span class="nav-toggle" data-target="#main-nav"><i class="fa fa-caret-left fa-5x"></i></span>
+      <nav>
+        <div class="nav-wrapper content">
+          <img src="images/logo-cpnv.png" class="logo" alt="">
+          <span class="nav-toggle" data-target="#main-nav"><i class="fa fa-caret-down fa-5x"></i></span>
+        </div>
+      </nav>
+
+    </div>
+    <!-- Offscreen nav -->
+    <div id="main-nav" class="nav">
+      <span class="nav-toggle" data-target="#main-nav"><i class="fa fa-times fa-3x"></i></span>
+      <div class="content center">
+        <div class="align-center row">
+          <form class="search-form input-field" action="#" method="post">
+            <input class="validate col s11" type="text" name="q" value="">
+            <div class="col s1">
+              <button class="btn-floating btn-large waves-effect waves-light blue" type="submit" name="action">
+                <i class="fa fa-search"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="align-center row">
+          <a class="link active" href="index.html">Acceuil</a>
+          <a class="link" href="#">Something</a>
+        </div>
+
       </div>
     </div>
     <div class="container main">
@@ -27,25 +51,11 @@
           <div class="bubble-big" id="bubble-formation" data-text="Formations"></div>
           <div data-connect="#bubble-formation" class="bubble-small bubble--first" data-text="Plan de formation"><a class="link" href="/formation.html"></a></div>
         </div>
-    </div>
-    <!-- Offscreen nav -->
-    <div id="main-nav" class="nav">
-      <div class="nav-header">
-        <div class="center row">
-          <form class="search-form input-field" action="index.html" method="post">
-            <input class="validate col s11" type="text" name="q" value="">
-            <button class="btn waves-effect waves-light col s1" type="submit" name="action">
-              <i class="fa fa-search"></i>
-            </button>
-          </form>
+        <div class="scroll-helper animated">
+          <p>Scroll Down</p>
         </div>
-        <span class="nav-toggle" data-target="#main-nav"><i class="fa fa-times fa-3x"></i></span>
-      </div>
-      <div class="content center">
-        <a class="link" href="index.html">Acceuil</a>
-        <a class="link" href="#">Something</a>
-      </div>
     </div>
+
     <script type="application/javascript" src="bundle.js" charset="utf-8"></script>
     </body>
 </html>

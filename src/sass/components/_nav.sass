@@ -1,56 +1,81 @@
 //offscreen nav
 .nav
   display: none
-  opacity: 0.1
-  top: -100vw
+  opacity: 0
   color: $nav-color
+  z-index: 1200
+  position: fixed
+  position: absolute
+  left: 0
+  top: 0
+  width: 100vw
+  height: 100vh
+  display: flex
+  flex-direction: row
+  justify-content: center
+  align-items: center
+  overflow: hidden
   &.show
-    transition: top 4s ease, opacity 3s ease 0.5s
-    position: absolute
-    left: 0
-    top: 0
-    width: 100vw
-    height: 100vh
-    display: flex
-    flex-direction: column
-    justify-content: center
-    align-items: center
     opacity: $nav-opacity
     background-color: $nav-bg
-    & .nav-header
-      top: 0
-      margin-top: 5px
-    & .nav-toggle
+    & ~ .main
+      opacity: 0.3
+      background-color: lighten(black, 20%)
+    & ~ .nav-fix>nav
       position: absolute
-      top: 0
-      right: 0
-      margin: 10px
-      margin-right: 15px
+      opacity: 0.2
+      background-color: lighten(black, 20%)
     & .content
-      width: 60vw
-      margin: 0 auto 5px
-      &.link
+      @extend .center-align
+      overflow-y: auto
+      height: 70%
+      width: 100%
+      margin-left: 10%
+      margin-right: 10%
+      //margin: 70px auto 5px
+    & .link
+        list-style: none
+        font-size: 5rem
+        display: block
         padding-top: 3px
         padding-bottom: 3px
         padding-left: 10px
         padding-right: 10px
         text-decoration: none
-        background-color: darken($nav-bg, 70)
+        color: white
         &:hover
-          background-color: lighten($nav-bg, 50)
+          background-color: darken($nav-bg, 10%)
           opacity: 1
 //on screen nav with logo
 .nav-fix
-  height: 50px
-  & .content
-    position: relative
-    //background: darken($nav-color,30%)
-    width: 50%
-    height: 200px
-    margin: 20px auto
-    & .logo
-      margin-left: auto
-      margin-right: 10px
-    & .nav-toggle
-      max-width: 100px
-      max-height: 100px
+  @extend .navbar-fixed
+  z-index: 0
+  @extend .center-align
+  & nav
+    height: 100px
+    background: darken($nav-color,30%)
+    opacity : 0.6
+    &:hover
+      transition: opacity 0.8s
+      opacity: 1
+  & .logo
+    margin-left: auto
+    margin-right: 10px
+  & .nav-toggle
+    margin-right: 8rem/4
+    margin-top: 10px
+  @at-root
+    .nav-toggle
+      cursor: pointer
+      width: 60px
+      height: 60px
+      color: darken($gray, 60%)
+      position: fixed
+      top: 0
+      right: 0
+      padding-right: 8px
+
+      // margin: 10px
+      // margin-right: 30px
+      // & > i.fa
+      //   @extend .center-align
