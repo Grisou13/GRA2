@@ -28,6 +28,7 @@ var paths = {
   bootstrap:'./node_modules/bootstrap-sass/assets/',
   material : "./node_modules/materialize-css/",
   fontawesome:'./node_modules/font-awesome/',
+  animatecss:"./node_modules/animate-sass/",
   jquery:'./node_modules/jquery/',
   images: './src/images/**/*.*',
   html: './src/**.html'
@@ -38,7 +39,8 @@ var sassConfig = {
   includePaths :[
     //path.join(__dirname, paths.bootstrap , "/stylesheets/"),
     path.join(__dirname,paths.material,"/sass/"),
-    path.join(__dirname,paths.fontawesome , "/scss/")
+    path.join(__dirname,paths.fontawesome , "/scss/"),
+    path.join(__dirname,paths.animatecss)
   ]
 }
 
@@ -90,12 +92,11 @@ gulp.task('browsersync', function() {
 gulp.task('sass', function () {
   return gulp.src('./src/sass/app.sass')
   .on('error', gutil.log.bind(gutil, 'Sass Error'))
-  //.pipe(sourcemaps.write())
-        // for file sourcemaps
-        .pipe(sourcemaps.write('maps', {
-            includeContent: false,
-            sourceRoot: './src/sass'
-        }))
+    // for file sourcemaps
+    .pipe(sourcemaps.write('maps', {
+        includeContent: false,
+        sourceRoot: './src/sass'
+    }))
     .pipe(sass(sassConfig))
     .pipe(gulp.dest('./dist'))
     //.pipe(gulp.dest('./src/css/'))

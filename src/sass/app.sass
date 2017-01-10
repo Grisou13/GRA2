@@ -11,6 +11,8 @@
 //@import "bootstrap"
 @import "materialize"
 @import "font-awesome"
+$use-all: true !default
+@import "animate"
 //utils
 @import "utils/mixins"
 @import "utils/position"
@@ -22,8 +24,4 @@
 @import "components/nav"
 @import "components/hero"
 
-html
-  font-family: sans-serif
-  background-color: $gray
-body
-  background-color: $gray
+@import "layout/page"

@@ -5,6 +5,8 @@ module.exports = class NavBar{
       document.querySelectorAll(nav).forEach((nav_el)=>{
         el.addEventListener("click",()=>{
           nav_el.classList.toggle("show");
+          nav_el.classList.toggle("animated");
+          nav_el.classList.toggle("bounceInDown");
           let transProps = getTransitionProperty(nav_el);
           console.log(transProps);
         })
