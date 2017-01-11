@@ -16,6 +16,21 @@
     "type": "git",
     "url": "https://github.com/bensmithett/webpack-css-example.git"
   },
+  "browser": {
+    "jquery": "./node_modules/jquery/dist/jquery.js",
+    "materialize": "./node_modules/materialize-css/bin/materialize.js",
+    "particle":"./node_modules/particles.js/particles.js"
+  },
+  "browserify-shim": {
+    "jquery": "$",
+    "materialize": "materialize",
+    "particle":"particle"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
   "author": "",
   "license": "MIT",
   "bugs": {
@@ -23,14 +38,15 @@
   },
   "homepage": "https://github.com/bensmithett/webpack-css-example",
   "dependencies": {
+    "animatecss": "git+https://github.com/tgdev/animate-sass.git",
     "autoprefixer": "^6.3.6",
     "babel-core": "^6.9.0",
     "es6-promise": "^4.0.5",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.1.1",
     "materialize-css": "^0.97.8",
     "node-sass": "^3.9.1",
-    "jquery": "^3.1.1",
-    "font-awesome": "^4.7.0",
-    "animatecss": "git+https://github.com/tgdev/animate-sass.git"
+    "particles.js": "^2.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.16.0",
@@ -43,6 +59,7 @@
     "brfs": "^1.4.3",
     "browser-sync": "^2.18.2",
     "browserify": "^13.1.0",
+    "browserify-shim": "^3.8.12",
     "debowerify": "^1.5.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",

@@ -1,63 +1,104 @@
 //offscreen nav
 .nav
-  display: none
-  opacity: 0
+  //@extend .animated
+
+  @extend .bounceOutUp
   color: $nav-color
   z-index: 1200
   position: fixed
-  position: absolute
+  //position: absolute
   left: 0
   top: 0
-  width: 100vw
+  width: 100%
   height: 100vh
-  display: flex
+  display: none
   flex-direction: row
   justify-content: center
   align-items: center
   overflow: hidden
+  background-color: $nav-bg
+  & .nav-toggle
+    display: none
+  & .content
+    @extend .center-align
+    overflow-y: auto
+    height: 70%
+    width: 100%
+    margin-left: 10%
+    margin-right: 10%
+    //margin: 70px auto 5px
+  & .links
+    width: 70%
+  & .link
+      list-style: none
+      font-size: 5rem
+      display: block
+      padding-top: 3px
+      padding-bottom: 3px
+      padding-left: 10px
+      padding-right: 10px
+      text-decoration: none
+      color: white
+      opacity: 0.4
+      & .active
+        opacity: 0.8
+        color: $gray
+      &:hover
+        opacity: 1
+      @at-root
+        a
+          text-decoration: none
+          position: relative
+        a:before
+          @extend .center-align
+          content: ""
+          position: absolute
+          width: 100%
+          height: 2px
+          bottom: 0
+          left: 0
+
+          background-color: white
+          visibility: hidden
+          -webkit-transform: scaleX(0)
+          transform: scaleX(0)
+          -webkit-transition: all 0.3s ease-in-out 0s
+          transition: all 0.3s ease-in-out 0s
+        a:hover:before
+            visibility: visible
+            -webkit-transform: scaleX(1)
+            transform: scaleX(1)
   &.show
+    @extend .bounceInDown
+    @extend .center-align
+    display: flex
     opacity: $nav-opacity
-    background-color: $nav-bg
-    & ~ .main
-      opacity: 0.3
-      background-color: lighten(black, 20%)
-    & ~ .nav-fix>nav
-      position: absolute
+    top: 0
+    left: 0
+    & .nav-toggle
+      display: block
+      position: absolute !important
+    &~.main
       opacity: 0.2
-      background-color: lighten(black, 20%)
-    & .content
-      @extend .center-align
-      overflow-y: auto
-      height: 70%
-      width: 100%
-      margin-left: 10%
-      margin-right: 10%
-      //margin: 70px auto 5px
-    & .link
-        list-style: none
-        font-size: 5rem
-        display: block
-        padding-top: 3px
-        padding-bottom: 3px
-        padding-left: 10px
-        padding-right: 10px
-        text-decoration: none
-        color: white
-        &:hover
-          background-color: darken($nav-bg, 10%)
-          opacity: 1
+    & + .nav-fix>nav
+      display: none !important
+      visibility: hidden
+
 //on screen nav with logo
 .nav-fix
   @extend .navbar-fixed
   z-index: 0
   @extend .center-align
+
   & nav
     height: 100px
-    background: darken($nav-color,30%)
-    opacity : 0.6
+    background: $nav-fix-bg
+    opacity : 0.4
+    transition: opacity 0.6s ease-in-out
     &:hover
-      transition: opacity 0.8s
-      opacity: 1
+      zoom: 1
+      filter: alpha(opacity=90)
+      opacity: 0.9
   & .logo
     margin-left: auto
     margin-right: 10px
@@ -69,7 +110,7 @@
       cursor: pointer
       width: 60px
       height: 60px
-      color: darken($gray, 60%)
+      color: white
       position: fixed
       top: 0
       right: 0

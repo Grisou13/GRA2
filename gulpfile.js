@@ -91,17 +91,14 @@ gulp.task('browsersync', function() {
 
 gulp.task('sass', function () {
   return gulp.src('./src/sass/app.sass')
-  .on('error', gutil.log.bind(gutil, 'Sass Error'))
-    // for file sourcemaps
-    .pipe(sourcemaps.write('maps', {
-        includeContent: false,
-        sourceRoot: './src/sass'
-    }))
-    .pipe(sass(sassConfig))
-    .pipe(gulp.dest('./dist'))
-    //.pipe(gulp.dest('./src/css/'))
-    .pipe(filter('**/*.css'))
-    .pipe(browserSync.reload({stream:true}));
+        .pipe(sourcemaps.init())
+
+        .pipe(sass(sassConfig).on('error', gutil.log ))
+        .pipe(sourcemaps.write({includeContent: false, sourceRoot: '.'}))
+        .pipe(gulp.dest('./dist'))
+        //.pipe(gulp.dest('./src/css/'))
+        .pipe(filter('**/*.css'))
+        .pipe(browserSync.reload({stream:true}));
 });
 
 gulp.task('watch-sass', function () {
