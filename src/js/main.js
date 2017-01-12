@@ -7,7 +7,6 @@ var Materialize = require("materialize")
 global.particleJS = window.particleJS = require("particle")
 jQuery.noConflict(true);
 var NavBar = require('./nav');
-
 var Hero = require('./hero');
 //
 let nav = new NavBar();

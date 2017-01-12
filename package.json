@@ -19,12 +19,12 @@
   "browser": {
     "jquery": "./node_modules/jquery/dist/jquery.js",
     "materialize": "./node_modules/materialize-css/bin/materialize.js",
-    "particle":"./node_modules/particles.js/particles.js"
+    "particle": "./node_modules/particles.js/particles.js"
   },
   "browserify-shim": {
     "jquery": "$",
     "materialize": "materialize",
-    "particle":"particle"
+    "particle": "particle"
   },
   "browserify": {
     "transform": [
@@ -78,6 +78,8 @@
     "mocha": "^3.1.0",
     "nodemon": "^1.10.2",
     "standard": "^8.2.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.8.0"
   }
 }

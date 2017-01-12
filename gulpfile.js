@@ -50,7 +50,7 @@ gulp.task('browserify', function () {
 
   bundler.transform('debowerify');
   bundler.transform('brfs');
-  bundler.transform("babelify", {presets: ["es2017","es2016"]})
+  bundler.transform("babelify")
   return bundler.bundle()
     .on('error', gutil.log.bind(gutil, 'Browserify Error'))
     .pipe(source('bundle.js'))

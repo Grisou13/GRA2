@@ -23,8 +23,6 @@ Je vais aussi utiliser les icons material design. Actuellement presque tout est 
 
 3 images sont disponible. Chaque image sera utilisé pcomme image de garde lors de l'introduction des différentes formation. Aute que cela je ne penses pas utilisé plus d'image.
 
-
-
 # Acceuil
 
 La page d'acceuil sera changé légérement. J'ai décidé de faire un sorte de page d'acceuil facile à comprendre.
@@ -36,11 +34,43 @@ Précédamment le Hero était une simple image avec un petit texte. J'ai revu ç
 Hero soit avec http://vincentgarreau.com/particles.js/
 Ou https://github.com/qrohlf/trianglify
 
-# Page de Stage
+# Page standard
+
+Les page dite de contenu auront un effet parralax. L'idée là est de crée des image avec des gaussian blur.
+
+## Page de Stage
 
 J'ai décidé de faire la page de stage plus simple. Elle sera divisé en 2 partie, et non pas en 2 page comme je l'avais initialement prévu.
 Cela requiert d'etre agile avec le contenu. Il sera séparé en 2 tabs différent (les tabs se réduiront lors du scroll par exemple, un genre de parralax).
 
-# Page de formation
+## Page de formation
 
 Les formations sera aussi divisé en 3 tabs.
+
+# Integration
+
+Le site sera construi pour etre facilement intégré à des système existant, tel que wordpress, ou dans des template personalisé (jade, blade).
+
+# Organisation du code
+
+config and paths :
+```json
+{
+  "styles":"./src/sass/**/*.+(sass|scss)",
+  "scripts":"src/js/**/*.+(js|jsx)",
+  "bootstrap":"./node_modules/bootstrap-sass/assets/",
+  "material" : "./node_modules/materialize-css/",
+  "fontawesome":"./node_modules/font-awesome/",
+  "animatecss":"./node_modules/animate-sass/",
+  "jquery":"./node_modules/jquery/",
+  "images": "./src/images/**/*.*",
+  "templates": "./src/**.html"
+}
+```
+
+
+ - sass
+  - app.sass : imports all the components
+  - components
+  - layout
+- js
