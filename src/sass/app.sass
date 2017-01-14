@@ -12,6 +12,12 @@
 //@import "bootstrap"
 // http://materializecss.com
 @import "materialize"
+.parallax img
+    @media #{$small-and-down}
+      max-width: 200%
+    @media #{$medium-and-up} 
+      width: 100%
+
 // http://fontawesome.io/icons/
 @import "font-awesome"
 // https://daneden.github.io/animate.css/
