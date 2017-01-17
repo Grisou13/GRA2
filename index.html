@@ -91,38 +91,43 @@
     <!-- Offscreen nav -->
     <div id="main-nav" class="nav">
       <span class="nav-toggle" data-target="#main-nav"><i class="fa fa-times fa-3x"></i></span>
-      <div class="content">
+      <div class="content container">
         <div class="align-center row">
           <form class="search-form input-field" action="#" method="post">
-            <input class="validate col s11" type="text" name="q" value="">
-            <div class="col s1">
+            <input class="validate col s9 m11" type="text" name="q" value="">
+            <div class="col s2 m1">
               <button class="btn-floating btn-large waves-effect waves-light blue" type="submit" name="action">
                 <i class="fa fa-search"></i>
               </button>
             </div>
           </form>
         </div>
-        <div class="align-center row links">
-          <a class="link active" href="page.html">Something</a>
-          <a class="link" href="#">Something</a>
+        <div class="align-center row">
+          <ul class="links col s12">
+            <li><a class="link active" href="page.html">Something</a></li>
+            <li><a class="link" href="#">Something</a></li>
+          </ul>
         </div>
       </div>
     </div>
     <div class="hero">
       <div id="hero-background"></div>
-      <div class="text">
+      <div class="center-align">
         <p>Bienvenue</p>
       </div>
     </div>
     <main class="container main">
         <div class="bubbles">
-          <div class="bubble-big" id="bubble-fil" data-text="Filières">
-            <div data-connect="#bubble-fil" class="bubble-small bubble--first" data-text="Meca"><a class="bubble-link" href="/filiaire.html#meca"></a></div>
-            <div data-connect="#bubble-fil" class="bubble-small bubble--second" data-text="Info"><a class="bubble-link" href="/filiaire.html#info"></a></div>
-            <div data-connect="#bubble-fil" class="bubble-small bubble--third" data-text="System"><a class="bubble-link" href="/filiaire.html#system"></a></div>
+          <div class=" bubble-container" id="bubble-fil" data-text="Filières">
+
+            <div data-connect="#bubble-fil" class="bubble bubble-small bubble--first" data-text="Meca"><a class="bubble-link" href="/filiaire.html#meca"></a></div>
+            <div data-connect="#bubble-fil" class="bubble bubble-small bubble--second" data-text="Info"><a class="bubble-link" href="/filiaire.html#info"></a></div>
+            <div data-connect="#bubble-fil" class="bubble bubble-small bubble--third" data-text="System"><a class="bubble-link" href="/filiaire.html#system"></a></div>
+            <div class="bubble-center bubble-big"></div>
           </div>
 
-          <div class="bubble-big" id="bubble-formation" data-text="Formations">
+          <div class="bubble-container" id="bubble-formation" data-text="Formations">
+            <div class="bubble-center bubble-big"></div>
             <div data-connect="#bubble-formation" class="bubble-small bubble--first" data-text="Plan de formation"><a class="bubble-link" href="/formation.html"></a></div>
           </div>
 
