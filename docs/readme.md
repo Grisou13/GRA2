@@ -10,7 +10,7 @@ https://p.ota.to/ + Header top right
 https://www.akqa.com/ + Big text areas, Big images - Pas très clair
 http://www.yurz.com/ Parralax sympa
 https://seriftemplates.com/parallax-webplus-template.html parallax with great grayscale images
-
+https://trace.risingstack.com/ uses particle.js in a good way
 
 Le projet se démarquera dans la réalisation avec la création d'animation.
 

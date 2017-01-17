@@ -5,34 +5,27 @@ module.exports = class NavBar{
       document.querySelectorAll(nav).forEach((nav_el)=>{
         el.addEventListener("click",()=>{
           nav_el.classList.add("animated")
-          nav_el.classList.toggle("show")
           document.querySelectorAll(".nav-fix").forEach((e_)=>{
-            e_.classList.toggle("hidden");
+            e_.classList.add("animated");
           })
-          //nav_el.classList.toggle("animated");
-          // if(nav_el.classList.contains("bounceInDown")){
-          //   nav_el.classList.remove("bounceInDown");
-          //   nav_el.classList.add("bounceOutUp");
-          //   let cb = (e) =>{
-          //     nav_el.classList.remove("show");
-          //   }
-          //   ("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend".split(" ")).forEach((e_)=>{
-          //       window.addEventListener(e_,cb,false);
-          //   });
-          // }
-          // else{
-          //   nav_el.classList.add("bounceInDown");
-          //   nav_el.classList.remove("bounceOutUp");
-          //   let cb = (e) =>{
-          //     nav_el.classList.add("show");
-          //   }
-          //   ("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend".split(" ")).forEach((e_)=>{
-          //       window.addEventListener(e_,cb,false);
-          //   });
-          // }
-
-
-
+          if(nav_el.classList.contains("show"))
+          {
+            nav_el.classList.remove("show")
+            nav_el.classList.add("close")
+            document.querySelectorAll(".nav-fix").forEach((e_)=>{
+              e_.classList.remove("fadeOut");
+              e_.classList.add("fadeIn");
+            })
+          }
+          else
+          {
+            nav_el.classList.add("show")
+            nav_el.classList.remove("close")
+            document.querySelectorAll(".nav-fix").forEach((e_)=>{
+              e_.classList.remove("fadeIn");
+              e_.classList.add("fadeOut");
+            })
+          }
         })
       })
     })

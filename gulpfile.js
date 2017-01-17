@@ -22,6 +22,14 @@ var filter = require('gulp-filter');
 
 var exec = require('child_process').exec;
 
+var minifyCss = require('gulp-minify-css');
+
+function minifyIfNeeded() {
+    return gutil.env.env === 'prod'
+        ? minify()
+        : gutil.noop();
+}
+
 var paths = {
   styles:'./src/sass/**/*.+(sass|scss)',
   scripts:'src/js/**/*.+(js|jsx)',
@@ -35,7 +43,7 @@ var paths = {
 }
 
 var sassConfig = {
-  style:"nested",
+  style: "nested",
   includePaths :[
     //path.join(__dirname, paths.bootstrap , "/stylesheets/"),
     path.join(__dirname,paths.material,"/sass/"),
@@ -96,6 +104,7 @@ gulp.task('sass', function () {
         .pipe(sass(sassConfig).on('error', gutil.log ))
         .pipe(sourcemaps.write({includeContent: false, sourceRoot: '.'}))
         .pipe(gulp.dest('./dist'))
+        .pipe(minifyIfNeeded())
         //.pipe(gulp.dest('./src/css/'))
         .pipe(filter('**/*.css'))
         .pipe(browserSync.reload({stream:true}));
