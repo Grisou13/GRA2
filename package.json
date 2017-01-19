@@ -38,7 +38,7 @@
   },
   "homepage": "https://github.com/bensmithett/webpack-css-example",
   "dependencies": {
-    "animatecss": "git+https://github.com/tgdev/animate-sass.git",
+    "animatecss": "git+https://github.com/tgdev/animate-css.git",
     "autoprefixer": "^6.3.6",
     "babel-core": "^6.9.0",
     "es6-promise": "^4.0.5",
