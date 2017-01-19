@@ -14,6 +14,10 @@ https://trace.risingstack.com/ uses particle.js in a good way
 
 Le projet se démarquera dans la réalisation avec la création d'animation.
 
+# Logo
+
+Faire un logo avec CPNV, un livre, et ES
+
 # Icones
 
 Je ne penses pas crée d'icone particulière. Je vais néenmoins utiliser plusieurs set d'icones.
@@ -33,6 +37,19 @@ Pour cela quoi de plus simple que quelque liens pour permettre de naviguer au pr
 J'ai néenmoins révisé la manière dont est disposé le contenu. Il faut que la page attire l'oeuil, mais aussi que l'on comprenne que c'est un site d'une école.
 Précédamment le Hero était une simple image avec un petit texte. J'ai revu ça en y ajoutant des tiles animé
 
+## Hero
+
+La première section, le Hero, je ne me suis pas encore décidé. Je suis passé sur plusieurs iteration. Une avec juste une image de fond et du texte.
+
+- Une avec particle.js, et seulement du texte.
+- Une avec particle.js, une vidéo d'arrière plan, et du texte.
+- Une avec particle.js et un gradient de background vert.
+
+Le probleme avec toute ces iteration, c'est qu'il n'y en a aucune qui est très catchy.
+
+La meilleures option reste l'image avec particlejs. Meme si l'image n'est pas très bien choisi.
+
+
 Hero soit avec http://vincentgarreau.com/particles.js/
 Ou https://github.com/qrohlf/trianglify
 
@@ -45,13 +62,17 @@ Les page dite de contenu auront un effet parralax. L'idée là est de crée des 
 J'ai décidé de faire la page de stage plus simple. Elle sera divisé en 2 partie, et non pas en 2 page comme je l'avais initialement prévu.
 Cela requiert d'etre agile avec le contenu. Il sera séparé en 2 tabs différent (les tabs se réduiront lors du scroll par exemple, un genre de parralax).
 
+En deuxième version. J'ai décidé de le faire 100% par parralax. Cela permet de séparer les sections avec des images, et pas besoins de faire des animations trop compliqué.
+
 ## Page de formation
 
 Les formations sera aussi divisé en 3 tabs.
 
 # Integration
 
-Le site sera construi pour etre facilement intégré à des système existant, tel que wordpress, ou dans des template personalisé (jade, blade).
+Le site sera construi pour etre facilement intégré à des système de templates (jade, blade).
+
+L'integration avec des theme de CMS, peux se faire mais est beaucoup plus complexe.
 
 # Organisation du code
 

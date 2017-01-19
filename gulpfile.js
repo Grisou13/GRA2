@@ -38,8 +38,9 @@ var paths = {
   fontawesome:'./node_modules/font-awesome/',
   animatecss:"./node_modules/animatecss/",
   jquery:'./node_modules/jquery/',
-  images: './src/images/**/*.*',
-  html: './src/**.html'
+  images: './src/images/**/*.+(svg|png|jpeg|jpg)',
+  html: './src/*.html',
+  fonts: 'fonts/**/*'
 }
 
 var sassConfig = {
@@ -129,7 +130,7 @@ gulp.task("watch-templates",function() {
   return gulp.watch("./src/*.html",["copy-templates"])
 })
 gulp.task("copy-images",function(){
-  return gulp.src("./src/images/*.+(svg|png|jpeg|jpg)")
+  return gulp.src("./src/images/**/*.+(svg|png|jpeg|jpg)")
   .pipe(filter('**/*.+(svg|png|jpeg|jpg)'))
   .pipe(browserSync.reload({stream:true}))
   .pipe(gulp.dest("./dist/images"));

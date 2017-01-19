@@ -1,17 +1,46 @@
 .hero
   width: 100%
-  height: 100%
+  //height: 100%
   margin: 0
   padding: auto
   //text-align: center
   margin-bottom: 20px
   left: 0
-  & #hero-background, & .hero-background
-    height: 70vh
-  //   width: 98vw
-  //   position: absolute
-  //   left: 0
+  height: 70vh
+  background-image: url(images/books-magazines-building-school.jpg)
+  background-size: cover
+  & .hero-background
+    position: static
+    top: 0
+    left: 0
+    min-width: 100%
+    min-height: 100%
+    width: auto
+    height: auto
+    z-index: -100
 
+    //background: url("http://il5.picdn.net/shutterstock/videos/23036422/thumb/1.jpg") no-repeat
+    //background-size: cover
+    & .hero-background__video
+      //&::before
+      content: ""
+      width: 100%
+      height: 100%
+      filter: opacity(50%) brightness(30%)
+      //z-index: -51
+      width: 100%
+
+  & .hero-background__particles
+    height: 500px
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    //z-index: -50
+    // top: 0
+    // left: 0
+    // width: 100%
+    // position: absolute
 .scroll-helper
   position: absolute
   bottom: 50px

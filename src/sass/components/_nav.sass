@@ -76,7 +76,6 @@
     left: 0
     & .nav-toggle
       display: block
-      position: absolute !important
     &~.main
       opacity: 0.5
       filter: blur(1px)
@@ -91,9 +90,11 @@
 //on screen nav with logo
 .nav-fix
   @extend .navbar-fixed
-  z-index: 0
+  cursor: pointer
+  & .pinnable
+    position: absolute
+  z-index: 100
   @extend .center-align
-
   & nav
     height: 100px
     background: $nav-fix-bg
@@ -115,7 +116,7 @@
       width: 60px
       height: 60px
       color: white
-      position: fixed
+      position: absolute
       top: 0
       right: 0
       padding-right: 8px

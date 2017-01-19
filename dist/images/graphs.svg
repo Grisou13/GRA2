@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="graphs" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 87.83 87.17" enable-background="new 0 0 87.83 87.17" xml:space="preserve">
+<g id="graph_x5F_info">
+	<g>
+		<g>
+			<g>
+				<path fill="#202020" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" d="M43.89,43.49l-21-37.88
+					c6.69-3.71,13.34-5.43,21-5.43V43.49z"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<path fill="#9F9F9F" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" d="M43.89,43.49L5.65,23.16
+					c4.04-7.6,9.71-13.37,17.24-17.55L43.89,43.49z"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<path fill="#404040" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" d="M43.89,43.49L2.05,54.7
+					c-2.97-11.09-1.8-21.41,3.59-31.54L43.89,43.49z"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<path fill="#808080" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" d="M43.89,43.49L23.56,81.73
+					C12.57,75.89,5.27,66.71,2.05,54.7L43.89,43.49z"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<path fill="#DFDFDF" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" d="M43.89,43.49l43.21-3.02
+					c1.67,23.86-16.32,44.56-40.19,46.23c-8.59,0.6-15.75-0.92-23.36-4.96L43.89,43.49z"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<path stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" d="M43.89,43.49V0.18c22.96,0,41.61,17.38,43.21,40.29
+					L43.89,43.49z"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+		</g>
+		<g>
+		</g>
+		<g>
+		</g>
+		<g>
+		</g>
+		<g>
+		</g>
+		<g>
+		</g>
+	</g>
+</g>
+<g id="graph_x5F_system">
+	<g>
+		<g>
+			<g>
+				<path fill="#9F9F9F" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" d="M43.84,43.49l-42.3,8.22
+					C-3.01,28.35,12.25,5.73,35.61,1.19c2.8-0.54,5.37-0.79,8.22-0.79V43.49z"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<path fill="#404040" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" d="M43.84,43.49l-2.26,43.03
+					C21.62,85.48,5.35,71.34,1.54,51.72L43.84,43.49z"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<path fill="#808080" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" d="M43.84,43.49l27.7,33.01
+					c-8.75,7.34-18.55,10.62-29.96,10.02L43.84,43.49z"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<path fill="#DFDFDF" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" d="M43.84,43.49l42.77,5.25
+					c-1.39,11.34-6.32,20.42-15.07,27.76L43.84,43.49z"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<path stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" d="M43.84,43.49V0.4c23.8,0,43.09,19.29,43.09,43.09
+					c0,1.9-0.09,3.36-0.32,5.25L43.84,43.49z"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+		</g>
+		<g>
+		</g>
+		<g>
+		</g>
+		<g>
+		</g>
+		<g>
+		</g>
+	</g>
+</g>
+<g id="graph_x5F_dev">
+	<g>
+		<g>
+			<g>
+				<path fill="#9F9F9F" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" d="M43.84,43.45l-42.3,8.22
+					C-3.01,28.31,12.25,5.69,35.61,1.15c2.8-0.54,5.37-0.79,8.22-0.79V43.45z"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<path fill="#404040" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" d="M43.84,43.45L33.41,85.26
+					C16.78,81.12,4.8,68.49,1.53,51.67L43.84,43.45z"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<path fill="#808080" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" d="M43.84,43.45l13.32,40.98
+					c-8.15,2.65-15.43,2.9-23.74,0.83L43.84,43.45z"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<path fill="#DFDFDF" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" d="M43.84,43.45l42.99-3.01
+					c1.39,19.94-10.66,37.81-29.67,43.99L43.84,43.45z"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<path stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" d="M43.84,43.45V0.36c22.85,0,41.39,17.3,42.99,40.09
+					L43.84,43.45z"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+		</g>
+		<g>
+		</g>
+		<g>
+		</g>
+		<g>
+		</g>
+		<g>
+		</g>
+	</g>
+</g>
+</svg>
