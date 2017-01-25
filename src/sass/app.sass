@@ -8,9 +8,19 @@
 @import "config/colors"
 @import "config/vars"
 //vendors ...
+// http://getbootstrap.com
 //@import "bootstrap"
+// http://materializecss.com
 @import "materialize"
+.parallax img
+    @media #{$small-and-down}
+      max-width: 200%
+    @media #{$medium-and-up}
+      width: 100%
+
+// http://fontawesome.io/icons/
 @import "font-awesome"
+// https://daneden.github.io/animate.css/
 $use-all: true !default
 @import "animate"
 //utils
@@ -24,6 +34,8 @@ $use-all: true !default
 @import "components/section"
 @import "components/nav"
 @import "components/hero"
+@import "components/parallax"
 
 @import "layout/page"
 @import "layout/fonts"
+@import "layout/main"

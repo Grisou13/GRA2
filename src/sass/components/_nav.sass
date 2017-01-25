@@ -21,7 +21,6 @@
     display: none
   & .content
     @extend .center-align
-    overflow-y: auto
     height: 70%
     width: 100%
     margin-left: 10%
@@ -31,7 +30,7 @@
     width: 70%
   & .link
       list-style: none
-      font-size: 5rem
+      font-size: 46px
       display: block
       padding-top: 3px
       padding-bottom: 3px
@@ -46,10 +45,10 @@
       &:hover
         opacity: 1
       @at-root
-        a
+        .link
           text-decoration: none
           position: relative
-        a:before
+        .link:before
           @extend .center-align
           content: ""
           position: absolute
@@ -64,7 +63,7 @@
           transform: scaleX(0)
           -webkit-transition: all 0.3s ease-in-out 0s
           transition: all 0.3s ease-in-out 0s
-        a:hover:before
+        .link:hover:before
             visibility: visible
             -webkit-transform: scaleX(1)
             transform: scaleX(1)
@@ -77,19 +76,25 @@
     left: 0
     & .nav-toggle
       display: block
-      position: absolute !important
     &~.main
-      opacity: 0.2
+      opacity: 0.5
+      filter: blur(1px)
+    &~.hero
+      opacity: 0.5
+      filter: blur(1px)
     & + .nav-fix>nav
       display: none !important
       visibility: hidden
-
+  &.close
+    @extend .bounceOutUp
 //on screen nav with logo
 .nav-fix
   @extend .navbar-fixed
-  z-index: 0
+  cursor: pointer
+  & .pinnable
+    position: absolute
+  z-index: 100
   @extend .center-align
-
   & nav
     height: 100px
     background: $nav-fix-bg
@@ -111,7 +116,7 @@
       width: 60px
       height: 60px
       color: white
-      position: fixed
+      position: absolute
       top: 0
       right: 0
       padding-right: 8px

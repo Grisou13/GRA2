@@ -2,7 +2,9 @@
 <html>
   <head>
     <title>GRA1</title>
-    <!-- Latest compiled and minified CSS -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Loader -->
     <style media="screen">
     /*loader*/
     #overlay{
@@ -69,6 +71,7 @@
         document.addEventListener('DOMContentLoaded', loadbar, false);
       }());
     </script>
+    <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="app.css" media="none" onload="if(media!='all')media='all'" />
   </head>
   <body>
@@ -76,11 +79,35 @@
       <div id="progstat"></div>
       <div id="progress"></div>
     </div>
-    <div class="nav-fix">
-      <nav>
+
+
+    <!-- hero -->
+    <div class="hero">
+      <!--<div class="hero-background">
+        c<video class="hero-background__video" autoplay loop poster="http://il5.picdn.net/shutterstock/videos/23036422/thumb/1.jpg">
+          <source src="http://ak2.picdn.net/shutterstock/videos/23036422/preview/stock-footage-electronic-circuit-zoom-in-tunnel-background-loop.mp4" type="video/mp4">
+        </video>
+      </div>-->
+      <!-- <img class="img-responsive" src="/images/img.jpg" style="filter: brightness(60%) opacity(80%)" height="100%" alt=""> -->
+      <div id="hero-background" class="hero-background__particles"></div>
+      <img class="hero-background__image" src="/images/books-magazines-building-school.jpg" alt="">
+      <div class="container center-align">
+        <div class="row">
+          <div class="col m6 s12">
+
+          </div>
+          <div class="col m6 s12">
+            <h1>Formation en école supérieur</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- fixed nav -->
+    <div class="nav-fix" data-target="#main-nav">
+      <nav class="pinnable">
         <div class="nav-wrapper">
           <img src="images/logo-cpnv.png" class="logo" alt="">
-          <span class="nav-toggle" data-target="#main-nav"><i class="fa fa-caret-down fa-5x"></i></span>
+          <span class="nav-toggle"><i class="fa fa-caret-down fa-5x"></i></span>
         </div>
       </nav>
 
@@ -88,42 +115,71 @@
     <!-- Offscreen nav -->
     <div id="main-nav" class="nav">
       <span class="nav-toggle" data-target="#main-nav"><i class="fa fa-times fa-3x"></i></span>
-      <div class="content">
+      <div class="content container">
         <div class="align-center row">
           <form class="search-form input-field" action="#" method="post">
-            <input class="validate col s11" type="text" name="q" value="">
-            <div class="col s1">
+            <input class="validate col s9 m11" type="text" name="q" value="">
+            <div class="col s2 m1">
               <button class="btn-floating btn-large waves-effect waves-light blue" type="submit" name="action">
                 <i class="fa fa-search"></i>
               </button>
             </div>
           </form>
         </div>
-        <div class="align-center row links">
-          <a class="link active" href="index.html">Something</a>
-          <a class="link" href="#">Something</a>
+        <div class="align-center row">
+          <ul class="links col s12">
+            <li><a class="link active" href="page.html">Something</a></li>
+            <li><a class="link" href="#">Something</a></li>
+          </ul>
         </div>
       </div>
     </div>
-    <div class="hero">
-      <div id="hero-background"></div>
-      <div class="text">
-        <p>Bienvenue</p>
-      </div>
-    </div>
-    <div class="container main">
+    <!-- bubbles -->
+    <main class="container main">
         <div class="bubbles">
-          <div class="bubble-big" id="bubble-fil" data-text="Filières"></div>
-          <div data-connect="#bubble-fil" class="bubble-small bubble--first" data-text="Meca"><a class="link" href="/filiaire.html#meca"></a></div>
-          <div data-connect="#bubble-fil" class="bubble-small bubble--second" data-text="Info"><a class="link" href="/filiaire.html#info"></a></div>
-          <div data-connect="#bubble-fil" class="bubble-small bubble--third" data-text="System"><a class="link" href="/filiaire.html#system"></a></div>
-          <div class="bubble-big" id="bubble-formation" data-text="Formations"></div>
-          <div data-connect="#bubble-formation" class="bubble-small bubble--first" data-text="Plan de formation"><a class="link" href="/formation.html"></a></div>
+          <div class=" bubble-container" id="bubble-fil" data-text="Filières">
+
+            <div data-connect="#bubble-fil" class="bubble bubble-small bubble--first" data-text="Meca"><a class="bubble-link" href="/filiaire.html#meca"></a></div>
+            <div data-connect="#bubble-fil" class="bubble bubble-small bubble--second" data-text="Info"><a class="bubble-link" href="/filiaire.html#info"></a></div>
+            <div data-connect="#bubble-fil" class="bubble bubble-small bubble--third" data-text="System"><a class="bubble-link" href="/filiaire.html#system"></a></div>
+            <div class="bubble-center bubble-big"></div>
+          </div>
+
+          <div class="bubble-container" id="bubble-formation" data-text="Formations">
+            <div class="bubble-center bubble-big"></div>
+            <div data-connect="#bubble-formation" class="bubble-small bubble--first" data-text="Plan de formation"><a class="bubble-link" href="/formation.html"></a></div>
+          </div>
+
         </div>
         <div class="scroll-helper animated">
           <p>Scroll Down</p>
         </div>
-    </div>
+    </main>
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+              <h5 class="white-text">Footer Content</h5>
+              <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+              <h5 class="white-text">Links</h5>
+              <ul>
+                <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+              </ul>
+            </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+          <div class="container">
+               	&copy; CPNV-ES
+                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+          </div>
+      </div>
+    </footer>
 
     <script type="application/javascript" src="bundle.js" charset="utf-8"></script>
     </body>

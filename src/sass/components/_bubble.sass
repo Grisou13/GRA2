@@ -1,75 +1,80 @@
 // http://codepen.io/chriscoyier/pen/yqHxB
-.bubble-wrapper
-  background-color: transparent
-  border: 1px solid hsla(0, 0%, 100%, 0.2)
-  border-radius: 50%
-  cursor: pointer
-  height: 245px
-  position: relative
-  width: 245px
-  z-index: 1
-  &::after, &::before
-    border-radius: 50%
-    content: ""
-    left: 50%
-    position: absolute
-    top: 50%
-    transform: translate(-50%, -50%)
-  &::after
-    border: 1px solid hsla(0, 0%, 100%, 0.1)
-    height: 400px
-    width: 400px
-  &::before
-    border: 2px solid hsla(0, 0%, 100%, 0.2)
-    height: 260px
-    width: 260px
+// .bubble-wrapper
+//   background-color: transparent
+//   border: 1px solid hsla(0, 0%, 100%, 0.2)
+//   border-radius: 50%
+//   cursor: pointer
+//   height: 245px
+//   position: relative
+//   width: 245px
+//   z-index: 1
+//   &::after, &::before
+//     border-radius: 50%
+//     content: ""
+//     left: 50%
+//     position: absolute
+//     top: 50%
+//     transform: translate(-50%, -50%)
+//   &::after
+//     border: 1px solid hsla(0, 0%, 100%, 0.1)
+//     height: 400px
+//     width: 400px
+//   &::before
+//     border: 2px solid hsla(0, 0%, 100%, 0.2)
+//     height: 260px
+//     width: 260px
+//
+// .bubble-inner
+//   &::after, &::before
+//     border: 2px solid hsla(0, 0%, 100%, 0.2)
+//     border-radius: 50%
+//     content: ""
+//     height: 260px
+//     left: 50%
+//     position: absolute
+//     top: 50%
+//     transform: translate(-50%, -50%)
+//     visibility: hidden
+//     width: 260px
+//
+// .bubble-info
+//   +textGlitch("bubble-glitch", 17, white, transparent, blue, red, 100, 30)
+//   left: 50%
+//   position: absolute
+//   text-align: center
+//   top: 50%
+//   transform: translate(-50%, -50%)
+//
+// .bubble-big-container
+//   background-image: url("./../images/circles.svg")
+//   background-size: contain
+//   color: green
+//   background-repeat: no-repeat
+//   width: 500px
+//   height: 500px
 
-.bubble-inner
-  &::after, &::before
-    border: 2px solid hsla(0, 0%, 100%, 0.2)
-    border-radius: 50%
-    content: ""
-    height: 260px
-    left: 50%
-    position: absolute
-    top: 50%
-    transform: translate(-50%, -50%)
-    visibility: hidden
-    width: 260px
 
-.bubble-info
-  +textGlitch("bubble-glitch", 17, white, transparent, blue, red, 100, 30)
-  left: 50%
-  position: absolute
-  text-align: center
-  top: 50%
-  transform: translate(-50%, -50%)
+// Hero info bubbles
+// These classes are only for making the content
+// And displaying it
 
-.bubble-big-container
-  background-image: url("./../images/circles.svg")
-  background-size: contain
-  color: green
-  background-repeat: no-repeat
-  width: 500px
-  height: 500px
-
-
-
+//content classes
 .bubbles
   width: 100%
   height: 80%
   min-height: 100px
   & .bubble-small
-    width: 150px
-    height: 150px
-    +animation("rotating 5s")
-    transform-origin: 50% 50%
-    position: relative
+    width: 300px
+    height: 300px
+    //+animation("rotating 5s")
+    //transform-origin: 50% 50%
+    //position: relative
     background-color: transparent
     border: 1px solid hsla(0, 0%, 100%, 0.2)
     border-radius: 50%
     cursor: pointer
     z-index: 1
+
     &::after, &::before
       border-radius: 50%
       content: ""
@@ -79,20 +84,53 @@
       transform: translate(-50%, -50%)
     &::after
       border: 1px solid hsla(0, 0%, 100%, 0.1)
-      height: 200px
-      width: 200px
+      height: 300px
+      width: 300px
     &::before
       border: 2px solid hsla(0, 0%, 100%, 0.2)
       height: 150px
       width: 150px
+    & .bubble-link
+      position: absolute
+      top: 0
+      left: 0
+      height: 100%
+      width: 100%
+      z-index: 999
+      &::after, &::before
+        border-radius: 50%
+        content: ""
+        left: 50%
+        position: absolute
+        top: 50%
+        transform: translate(-50%, -50%)
+      &::after
+        border: 1px solid hsla(0, 0%, 100%, 0.1)
+        height: 300px
+        width: 300px
+      &::before
+        border: 2px solid hsla(0, 0%, 100%, 0.2)
+        height: 150px
+        width: 150px
+    &:hover
+      opacity: .8
+      & .bubble-link
+        opacity: 1
+      &::before
+        width: 300px
+        height: 300px
+        opacity: 0
+        transition: width .75s, height .75s, opacity .5s .2s
+      &::after
+        width: 250px
+        height: 250px
+        opacity: 0
+        transition: width .75s, height .75s, opacity .5s .2s
 
   & .bubble-big
-    &:hover
-      +animation("rotating 5s")
-      transform-origin: 50% 50%
-    position: relative
-    width: 300px
-    height: 300px
+    // &:hover
+    //   +animation("rotating 5s")
+    //   transform-origin: 50% 50%
     cursor: pointer
     &::after
       content: " "
@@ -101,6 +139,8 @@
       background-repeat: no-repeat
       width: 300px
       height: 300px
+      top: 0
+      left: 0
     &::before
       content: " "
       background-image: url("images/circle-inner.svg")
@@ -108,25 +148,37 @@
       position: absolute
       width: 300px
       height: 300px
+
       //transform: translate(50%,50%)
 
-//cannot use .bubble class because of positions
-#bubble-fil
-  top: 50px
-  left: 150px
-  & ~ .bubble--first
-    top: 0px
-    left: 0px
-  & ~ .bubble--second
-    top: -84px
-    left: 150px
-  & ~ .bubble--third
-    top: -300px
-    left: 307px
+//position classes
+.bubble-container
+  +on-circle($item-count: 4, $circle-size: 52em, $item-size: 300px)
+  margin: 5em auto 0
+  //border: solid 5px tomato
+  & .bubble-center
+    transform: translate(0)
+  & .bubble
+    display: block
+    max-width: 100%
 
-#bubble-formation
-  top: 40px
-  left: 200px
-  & ~ .bubble--first
-    top: 40px
-    left: 150px
+//cannot use .bubble class because of positions
+// #bubble-fil
+//   top: 50px
+//   left: 150px
+//   & > .bubble--first
+//     top: 0px
+//     left: 0px
+//   & > .bubble--second
+//     top: -84px
+//     left: 150px
+//   & > .bubble--third
+//     top: -300px
+//     left: 307px
+//
+// #bubble-formation
+//   top: 40px
+//   left: 200px
+//   & > .bubble--first
+//     top: 40px
+//     left: 150px
