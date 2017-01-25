@@ -36,7 +36,7 @@ var paths = {
   bootstrap:'./node_modules/bootstrap-sass/assets/',
   material : "./node_modules/materialize-css/",
   fontawesome:'./node_modules/font-awesome/',
-  animatecss:"./node_modules/animatecss/",
+  animatecss:"./node_modules/animate-sass/",
   jquery:'./node_modules/jquery/',
   images: './src/images/**/*.+(svg|png|jpeg|jpg)',
   html: './src/*.html',

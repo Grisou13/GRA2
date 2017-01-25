@@ -76,11 +76,12 @@
       <div id="progstat"></div>
       <div id="progress"></div>
     </div>
-    <div class="nav-fix">
-      <nav>
+    <!-- fixed nav -->
+    <div class="nav-fix" data-target="#main-nav">
+      <nav class="pinnable">
         <div class="nav-wrapper">
           <img src="images/logo-cpnv.png" class="logo" alt="">
-          <span class="nav-toggle" data-target="#main-nav"><i class="fa fa-caret-down fa-5x"></i></span>
+          <span class="nav-toggle"><i class="fa fa-caret-down fa-5x"></i></span>
         </div>
       </nav>
 
@@ -88,28 +89,28 @@
     <!-- Offscreen nav -->
     <div id="main-nav" class="nav">
       <span class="nav-toggle" data-target="#main-nav"><i class="fa fa-times fa-3x"></i></span>
-      <div class="content">
+      <div class="content container">
         <div class="align-center row">
           <form class="search-form input-field" action="#" method="post">
-            <input class="validate col s11" type="text" name="q" value="">
-            <div class="col s1">
+            <input class="validate col s9 m11" type="text" name="q" value="">
+            <div class="col s2 m1">
               <button class="btn-floating btn-large waves-effect waves-light blue" type="submit" name="action">
                 <i class="fa fa-search"></i>
               </button>
             </div>
           </form>
         </div>
-        <div class="align-center row links">
-          <a class="link active" href="index.html">Something</a>
-          <a class="link" href="#">Something</a>
+        <div class="align-center row">
+          <ul class="links col s12">
+            <li><a class="link" href="index.html">Accueil</a></li>
+            <li><a class="link active" href="#">Info</a></li>
+          </ul>
         </div>
       </div>
     </div>
     <main class="main">
-      <div class="section gray">
-        <div class="page-header">
-          Page.html
-        </div>
+      <div class="section gray page-header" data-name="Formation">
+        
         <div class="row container">
           <h1 class="header">Some Introduction text</h1></div>
       </div>
