@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+  <head>
+    <title>GRA1</title>
+    <!-- Latest compiled and minified CSS -->
+    <style media="screen">
+    /*loader*/
+    #overlay{
+      position:fixed;
+      z-index:99999;
+      top:0;
+      left:0;
+      bottom:0;
+      right:0;
+      background:rgba(0,0,0,0.9);
+      transition: 1s 0.4s;
+      }
+      #progress{
+      height:1px;
+      background:#fff;
+      position:absolute;
+      width:0;
+      top:50%;
+      }
+      #progstat{
+      font-size:0.7em;
+      letter-spacing: 3px;
+      position:absolute;
+      top:50%;
+      margin-top:-40px;
+      width:100%;
+      text-align:center;
+      color:#fff;
+      }
+    </style>
+
+    <script type="text/javascript">
+      //loader
+      ;(function(){
+        function id(v){return document.getElementById(v); }
+        function loadbar() {
+          var ovrl = id("overlay"),
+              prog = id("progress"),
+              stat = id("progstat"),
+              img = document.images,
+              c = 0;
+              tot = img.length;
+
+          function imgLoaded(){
+            c += 1;
+            var perc = ((100/tot*c) << 0) +"%";
+            prog.style.width = perc;
+            stat.innerHTML = "Loading "+ perc;
+            if(c===tot) return doneLoading();
+          }
+          function doneLoading(){
+            ovrl.style.opacity = 0;
+            setTimeout(function(){
+              ovrl.style.display = "none";
+            }, 1200);
+          }
+          for(var i=0; i<tot; i++) {
+            var tImg     = new Image();
+            tImg.onload  = imgLoaded;
+            tImg.onerror = imgLoaded;
+            tImg.src     = img[i].src;
+          }
+        }
+        document.addEventListener('DOMContentLoaded', loadbar, false);
+      }());
+    </script>
+    <link rel="stylesheet" href="app.css" media="none" onload="if(media!='all')media='all'" />
+  </head>
+  <body>
+    <div id="overlay">
+      <div id="progstat"></div>
+      <div id="progress"></div>
+    </div>
+    <!-- fixed nav -->
+    <div class="nav-fix" data-target="#main-nav">
+      <nav class="pinnable">
+        <div class="nav-wrapper">
+          <img src="images/logo-cpnv.png" class="logo" alt="">
+          <span class="nav-toggle"><i class="fa fa-caret-down fa-5x"></i></span>
+        </div>
+      </nav>
+
+    </div>
+    <!-- Offscreen nav -->
+    <div id="main-nav" class="nav">
+      <span class="nav-toggle" data-target="#main-nav"><i class="fa fa-times fa-3x"></i></span>
+      <div class="content container">
+        <div class="align-center row">
+          <form class="search-form input-field" action="#" method="post">
+            <input class="validate col s9 m11" type="text" name="q" value="">
+            <div class="col s2 m1">
+              <button class="btn-floating btn-large waves-effect waves-light blue" type="submit" name="action">
+                <i class="fa fa-search"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="align-center row">
+          <ul class="links col s12">
+            <li><a class="link" href="index.html">Accueil</a></li>
+            <li><a class="link active" href="#">Info</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <main class="main">
+      <div class="section gray page-header" data-name="Formation">
+        
+        <div class="row container">
+          <h1 class="header">Some Introduction text</h1></div>
+      </div>
+      <div class="parallax-container">
+        <div class="parallax"><img src="http://lorempixel.com/640/480/city" alt=""></div>
+      </div>
+      <div class="section gray z-depth-3">
+        <div class="row container">
+          <h2 class="header">Some Introduction text</h2>
+          <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
+        </div>
+      </div>
+      <div class="parallax-container">
+        <div class="parallax"><img src="http://lorempixel.com/640/480/sports" alt=""></div>
+      </div>
+      <div class="section gray z-depth-3">
+        <div class="row container">
+          <h2 class="header">Some Introduction text</h2>
+          <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
+        </div>
+      </div>
+      <div class="parallax-container">
+        <div class="parallax"><img src="http://lorempixel.com/640/480/technics" alt=""></div>
+      </div>
+      <div class="section gray z-depth-3">
+        <div class="row container">
+          <h2 class="header">Some Introduction text</h2>
+          <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
+        </div>
+      </div>
+
+    </main>
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+              <h5 class="white-text">Footer Content</h5>
+              <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+              <h5 class="white-text">Links</h5>
+              <ul>
+                <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+              </ul>
+            </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+          <div class="container">
+               	&copy; CPNV-ES
+                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+          </div>
+      </div>
+    </footer>
+
+    <script type="application/javascript" src="bundle.js" charset="utf-8"></script>
+    <script type="text/javascript">
+
+
+    </script>
+    </body>
+</html>
