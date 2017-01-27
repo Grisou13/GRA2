@@ -1,0 +1,12 @@
+//- layout.pug
+doctype html
+html
+  head
+    title My Site - #{title}
+    block scripts
+      include partials/head.pug
+  body
+    block content
+    block foot
+      #footer
+        p some footer content

@@ -49,7 +49,8 @@ var sassConfig = {
     //path.join(__dirname, paths.bootstrap , "/stylesheets/"),
     path.join(__dirname,paths.material,"/sass/"),
     path.join(__dirname,paths.fontawesome , "/scss/"),
-    path.join(__dirname,paths.animatecss)
+    path.join(__dirname,paths.animatecss),
+    path.join(__dirname,"./node_modules/animatecss")
   ]
 }
 

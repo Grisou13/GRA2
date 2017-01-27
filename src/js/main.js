@@ -4,7 +4,7 @@ var $ = jQuery = window.jQuery = window.$ = require('jquery')
 // Bootstrap doesn't have a "main" field / export anything =(
 //var bootstrap = require('bootstrap-sass/assets/javascripts/bootstrap')
 var Materialize = require("materialize")
-
+window.ParticleJsConf = require("./particle-config");
 jQuery.noConflict(true);
 var NavBar = require('./nav');
 let nav = new NavBar();
