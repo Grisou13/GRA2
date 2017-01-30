@@ -1,0 +1,301 @@
+<!doctype html>
+<html>
+  <head>
+    <title>GRA1</title>
+    <!-- Latest compiled and minified CSS -->
+    <style media="screen">
+    /*loader*/
+    #overlay{
+      position:fixed;
+      z-index:99999;
+      top:0;
+      left:0;
+      bottom:0;
+      right:0;
+      background:rgba(0,0,0,0.9);
+      transition: 1s 0.4s;
+      }
+      #progress{
+      height:1px;
+      background:#fff;
+      position:absolute;
+      width:0;
+      top:50%;
+      }
+      #progstat{
+      font-size:0.7em;
+      letter-spacing: 3px;
+      position:absolute;
+      top:50%;
+      margin-top:-40px;
+      width:100%;
+      text-align:center;
+      color:#fff;
+      }
+    </style>
+
+    <script type="text/javascript">
+      //loader
+      ;(function(){
+        function id(v){return document.getElementById(v); }
+        function loadbar() {
+          var ovrl = id("overlay"),
+              prog = id("progress"),
+              stat = id("progstat"),
+              img = document.images,
+              c = 0;
+              tot = img.length;
+
+          function imgLoaded(){
+            c += 1;
+            var perc = ((100/tot*c) << 0) +"%";
+            prog.style.width = perc;
+            stat.innerHTML = "Loading "+ perc;
+            if(c===tot) return doneLoading();
+          }
+          function doneLoading(){
+            ovrl.style.opacity = 0;
+            setTimeout(function(){
+              ovrl.style.display = "none";
+            }, 1200);
+          }
+          for(var i=0; i<tot; i++) {
+            var tImg     = new Image();
+            tImg.onload  = imgLoaded;
+            tImg.onerror = imgLoaded;
+            tImg.src     = img[i].src;
+          }
+        }
+        document.addEventListener('DOMContentLoaded', loadbar, false);
+      }());
+    </script>
+    <link rel="stylesheet" href="app.css" media="none" onload="if(media!='all')media='all'" />
+  </head>
+  <body>
+    <div id="overlay">
+      <div id="progstat"></div>
+      <div id="progress"></div>
+    </div>
+    <!-- fixed nav -->
+    <div class="nav-fix" data-target="#main-nav">
+      <nav class="pinnable">
+        <div class="nav-wrapper">
+          <img src="/images/logo.svg" class="logo" alt="">
+          <span class="nav-toggle"><i class="fa fa-caret-down fa-5x"></i></span>
+        </div>
+      </nav>
+
+    </div>
+    <!-- Offscreen nav -->
+    <div id="main-nav" class="nav">
+      <span class="nav-toggle" data-target="#main-nav"><i class="fa fa-times fa-3x"></i></span>
+      <div class="content container">
+        <div class="align-center row">
+          <form class="search-form input-field" action="#" method="post">
+            <input class="validate col s9 m11" type="text" name="q" value="">
+            <div class="col s2 m1">
+              <button class="btn-floating btn-large waves-effect waves-light blue" type="submit" name="action">
+                <i class="fa fa-search"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="align-center row">
+          <ul class="links col s12">
+            <li><a class="link active" href="index.html">Accueil</a></li>
+            <li><a class="link" href="formation.html">Formation</a></li>
+            <li><a class="link" href="stage.html">Stages</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <main class="main">
+      <!-- Page header -->
+      <div class="section gray no-pad-bot z-depth-3 flow-text">
+        <div class="container">
+          <div class="row">
+            <div class=" col s12 m12 l12 page-header__wrapper valign-wrapper">
+              <h5 class="valign center-align page-header__text">Formation</h5>
+            </div>
+            <div class="col s12 valign-wrapper">
+              <h1 class="center-align valign">Technicien ES</h1>
+            </div>
+          </div>
+          <div class="row">
+            <h2 class="col s12">Qu’est-ce que le titre de Technicien-ne ES?</h2>
+            <p>Le titre de technicien-ne ES informatique est un titre fédéral reconnu en Europe (Ingénieur Euréta). Cette formation permet aux titulaires d’un CFC en informatique d’étendre leurs compétences afin de mieux répondre à la demande des entreprises en spécialistes compétents. Les études à l’ES permettent d’acquérir une base solide constituée de connaissances techniques, économiques et générales.</p>
+          </div>
+        </div>
+      </div>
+      <!-- /Page header -->
+      <div class="parallax-container valign-wrapper">
+        <div class="section no-pad-bot container">
+          <div class="row valign center-align">
+            <h5 class="header col s12">EN BREF</h5>
+          </div>
+        </div>
+        <div class="parallax"><img src="images/info/pexels-photo-245032.jpeg" alt=""></div>
+      </div>
+      <div class="section container z-depth-3">
+        <div class="row">
+          <div class="col s12 m6">
+            <h5 class="header">Spécialisations Technicien-ne ES en informatique</h5>
+            <p>
+Le CPNV propose aux titulaires d’un certificat fédéral de capacité une formation supérieure en informatique dans la spécialisation « Technologies Système » ou « Développement d’applications », aboutissant après deux ans d’études à un diplôme fédéral de technicien ES.
+La spécialisation « Technologies Système » s’adresse aux étudiants désirant se perfectionner dans la gestion et la maintenance d’un parc informatique.
+La spécialisation « Développement d’applications » s’adresse aux étudiants désirant se perfectionner dans le développement et la maintenance d’applications web à but commercial.</p>
+          </div>
+          <div class="col s12 m6">
+            <h5 class="header">Débouchés professionnels</h5>
+            <p>Les techniciens spécialisés en « Technologies Système » ont la possibilité de travailler comme responsable réseau dans une PME, ou comme membre d’une équipe d’administration système / réseau dans une plus grande entreprise.
+Les techniciens spécialisés en « Développement d’applications » ont la possibilité de travailler comme développeurs web et/ou logiciel dans une société de développement, une agence ou pour de plus grandes entreprises, ainsi que dans l’administration de serveurs web.</p>
+          </div>
+        </div>
+      </div>
+      <div class="parallax-container valign-wrapper">
+        <div class="section no-pad-bot container">
+          <div class="row valign center-align">
+            <h5 class="header col s12">Condition d'admission</h5>
+          </div>
+        </div>
+        <div class="parallax"><img src="images/info/admission-pexels-photo-a94344.jpeg" alt=""></div>
+      </div>
+      <div class="section container z-depth-3">
+        <div class="row">
+          <p>Cette formation s’adresse aux personnes qui ont terminé avec succès un CFC d’informaticien ou de domaine apparenté (électronicien, médiamaticien, télématicien, automaticien).
+              L’admission a lieu sur la base :
+              <ul>
+                <li>D’un dossier personnel contenant curriculum vitae, copie du CFC ou titre équivalent, bulletin de notes, certificats de travail ainsi qu’une lettre de motivation.</li>
+                <li>D’un entretien personnel</li>
+              </ul>
+              L’admission devient définitive après la réussite du premier semestre d’études.</p>        </div>
+      </div>
+      <div class="parallax-container valign-wrapper">
+        <div class="section no-pad-bot container">
+          <div class="row valign center-align">
+            <h5 class="header col s12">la formation</h5>
+          </div>
+        </div>
+        <div class="parallax"><img src="/images/info/books-pexels-photo-12064.jpeg" alt=""></div>
+      </div>
+      <div class="section gray z-depth-3">
+        <div class="row container">
+          <p>La formation de type modulaire à plein temps est répartie sur deux ans à plein temps, incluant un stage en entreprise de trois mois et se concluant par un travail de diplôme de 6 semaines, également en entreprise.</p>
+          <img src="/images/info/formation-time.svg" height="120px" width="100%" alt="" id="#formation-times">
+          <p>Le découpage de la formation dans le temps se fait par trimestres. Chaque trimestre comporte 8 semaines de cours, suivies d’une semaine d’examens de validation des modules.</p>
+          <img src="/images/info/trim_flech_final.svg" alt="">
+        </div>
+      </div>
+      <div class="parallax-container valign-wrapper">
+        <div class="section no-pad-bot container">
+            <div class="row valign center-align">
+              <h5 class="header col s12">Les formations</h5>
+            </div>
+        </div>
+        <div class="parallax">
+          <img src="/images/info/people-coffee-notes-tea.jpg" alt="">
+        </div>
+      </div>
+      <div class="section gray z-depth-3">
+        <div class="row">
+          <div class="col s12 m3">
+            <div class="card green">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="/images/icons/coding.svg">
+              </div>
+              <div class="card-content">
+                <span class="card-title grey-text text-darken-4">Developpement d'applications<i class="activator right fa fa-plus-circle"></i></span>
+                <p class="truncate">Les techniciens spécialisés en « Développement d’applications » ont la possibilité de travailler comme développeurs web et/ou logiciel dans une société de développement, une agence ou pour de plus grandes entreprises, ainsi que dans l’administration de serveurs web.</p>
+              </div>
+              <div class="card-reveal green">
+                <span class="card-title grey-text text-darken-4">Developpement application <i class="fa fa-times right"></i></span>
+                <p>Les techniciens spécialisés en « Développement d’applications » ont la possibilité de travailler comme développeurs web et/ou logiciel dans une société de développement, une agence ou pour de plus grandes entreprises, ainsi que dans l’administration de serveurs web.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m3">
+            <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="images/office.jpg">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Card Title<i class="fa fa-arrow-up"></i></span>
+                <p><a href="#">This is a link</a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m3">
+            <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="images/office.jpg">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Card Title<i class="fa fa-arrow-up"></i></span>
+                <p><a href="#">This is a link</a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m3">
+            <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="images/office.jpg">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Card Title <i class="fa fa-arrow-up"></i> </span>
+                <p><a href="#">This is a link</a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </main>
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+            <div class="col l2 s12">
+              <h5 class="white-text">Adresses</h5>
+              <ul>
+                <li><a class="grey-text text-lighten-3" href="#!">Ste-Croix</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Yverdon</a></li>
+
+              </ul>
+            </div>
+            <div class="col l2 offset-l2 s12">
+              <h5 class="white-text">Contact</h5>
+              <ul>
+                <li><a class="grey-text text-lighten-3" href="#!">Messagerie</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Intranet</a></li>
+              </ul>
+            </div>
+            <div class="col l2 offset-l4 s12">
+              <i class="fa fa-arrow-circle-up fa-5x scroll-top" ></i>
+            </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+          <div class="container">
+               	&copy; CPNV-ES
+          </div>
+      </div>
+    </footer>
+
+    <script type="application/javascript" src="bundle.js" charset="utf-8"></script>
+    <script type="text/javascript">
+
+
+    </script>
+    </body>
+</html>
