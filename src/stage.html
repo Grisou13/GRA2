@@ -1,0 +1,239 @@
+<!doctype html>
+<html>
+  <head>
+    <title>GRA1</title>
+    <!-- Latest compiled and minified CSS -->
+    <style media="screen">
+    /*loader*/
+    #overlay{
+      position:fixed;
+      z-index:99999;
+      top:0;
+      left:0;
+      bottom:0;
+      right:0;
+      background:rgba(0,0,0,0.9);
+      transition: 1s 0.4s;
+      }
+      #progress{
+      height:1px;
+      background:#fff;
+      position:absolute;
+      width:0;
+      top:50%;
+      }
+      #progstat{
+      font-size:0.7em;
+      letter-spacing: 3px;
+      position:absolute;
+      top:50%;
+      margin-top:-40px;
+      width:100%;
+      text-align:center;
+      color:#fff;
+      }
+    </style>
+
+    <script type="text/javascript">
+      //loader
+      ;(function(){
+        function id(v){return document.getElementById(v); }
+        function loadbar() {
+          var ovrl = id("overlay"),
+              prog = id("progress"),
+              stat = id("progstat"),
+              img = document.images,
+              c = 0;
+              tot = img.length;
+
+          function imgLoaded(){
+            c += 1;
+            var perc = ((100/tot*c) << 0) +"%";
+            prog.style.width = perc;
+            stat.innerHTML = "Loading "+ perc;
+            if(c===tot) return doneLoading();
+          }
+          function doneLoading(){
+            ovrl.style.opacity = 0;
+            setTimeout(function(){
+              ovrl.style.display = "none";
+            }, 1200);
+          }
+          for(var i=0; i<tot; i++) {
+            var tImg     = new Image();
+            tImg.onload  = imgLoaded;
+            tImg.onerror = imgLoaded;
+            tImg.src     = img[i].src;
+          }
+        }
+        document.addEventListener('DOMContentLoaded', loadbar, false);
+      }());
+    </script>
+    <link rel="stylesheet" href="app.css" media="none" onload="if(media!='all')media='all'" />
+  </head>
+  <body>
+    <div id="overlay">
+      <div id="progstat"></div>
+      <div id="progress"></div>
+    </div>
+    <!-- fixed nav -->
+    <div class="nav-fix" data-target="#main-nav">
+      <nav class="pinnable">
+        <div class="nav-wrapper">
+          <img src="/images/logo.svg" class="logo" alt="">
+          <span class="nav-toggle"><i class="fa fa-caret-down fa-5x"></i></span>
+        </div>
+      </nav>
+
+    </div>
+    <!-- Offscreen nav -->
+    <div id="main-nav" class="nav">
+      <span class="nav-toggle" data-target="#main-nav"><i class="fa fa-times fa-3x"></i></span>
+      <div class="content container">
+        <div class="align-center row">
+          <form class="search-form input-field" action="#" method="post">
+            <input class="validate col s9 m11" type="text" name="q" value="">
+            <div class="col s2 m1">
+              <button class="btn-floating btn-large waves-effect waves-light blue" type="submit" name="action">
+                <i class="fa fa-search"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="align-center row">
+          <ul class="links col s12">
+            <li><a class="link active" href="index.html">Accueil</a></li>
+            <li><a class="link" href="formation.html">Formation</a></li>
+            <li><a class="link" href="stage.html">Stages</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <main class="main">
+      <!-- Page header -->
+      <div class="section gray no-pad-bot z-depth-3 flow-text">
+        <div class="container">
+          <div class="row">
+            <div class=" col s12 m12 l12 page-header__wrapper valign-wrapper">
+              <h5 class="valign center-align page-header__text">Stage</h5>
+            </div>
+            <div class="col s12 valign-wrapper">
+              <h1 class="center-align valign">Les stages pratiques en entreprises</h1>
+            </div>
+          </div>
+          <div class="row">
+            <h2 class="col s12">Stages pratiques en Suisse</h2>
+            <p>
+PROCÉDURE
+
+Procédure de validation des stages pratiques effectués en Suisse:
+
+    6 mois avant le stage et d’entente avec son doyen, l’apprenti ou l’étudiant sollicite une entreprise et expose les compétences qu’il doit acquérir pendant le stage
+    L’entreprise désigne un responsable de stage et définit le cahier des charges du stage • L’enseignant responsable valide le cahier des charges
+    Pendant le stage, la personne en formation tient à jour un journal de bord et établit un rapport de stage.
+    L’entreprise encadre le stagiaire, évalue son travail et délivre un certificat de travail • L’enseignant visite au moins 1 fois le stagiaire pendant le stage
+    A son retour de stage, la personne en formation présente son rapport à sa classe et à ses enseignants
+    L’évaluation porte sur les compétences humaines et techniques, ainsi que sur la qualité du rapport et de sa présentation.
+
+Ces notes interviennent dans la procédure de promotion et conditionnent la poursuite de la formation. La procédure est supervisée par le doyen de la filière de formation concernée.
+
+Il est de coutume que les stages pratiques soient rétribués par les entreprises. Le montant correspond approximativement au salaire mensuel d’un apprenti de 3e ou de 4e année en entreprise. Le cas échéant, le salaire est versé directement au stagiaire, sans passer par le CPNV. Le doyen est à disposition des personnes concernées en cas de question particulière.
+</p>
+          </div>
+        </div>
+      </div>
+      <!-- /Page header -->
+      <div class="parallax-container valign-wrapper">
+        <div class="section no-pad-bot container">
+          <div class="row valign center-align">
+            <h5 class="header col s12">EN BREF</h5>
+          </div>
+        </div>
+        <div class="parallax"><img src="images/info/pexels-photo-245032.jpeg" alt=""></div>
+      </div>
+      <div class="section container z-depth-3">
+        <div class="row">
+          <div class="col s12 m6">
+            <h5 class="header">Spécialisations Technicien-ne ES en informatique</h5>
+            <p>
+Le CPNV propose aux titulaires d’un certificat fédéral de capacité une formation supérieure en informatique dans la spécialisation « Technologies Système » ou « Développement d’applications », aboutissant après deux ans d’études à un diplôme fédéral de technicien ES.
+La spécialisation « Technologies Système » s’adresse aux étudiants désirant se perfectionner dans la gestion et la maintenance d’un parc informatique.
+La spécialisation « Développement d’applications » s’adresse aux étudiants désirant se perfectionner dans le développement et la maintenance d’applications web à but commercial.</p>
+          </div>
+          <div class="col s12 m6">
+            <h5 class="header">Débouchés professionnels</h5>
+            <p>Les techniciens spécialisés en « Technologies Système » ont la possibilité de travailler comme responsable réseau dans une PME, ou comme membre d’une équipe d’administration système / réseau dans une plus grande entreprise.
+Les techniciens spécialisés en « Développement d’applications » ont la possibilité de travailler comme développeurs web et/ou logiciel dans une société de développement, une agence ou pour de plus grandes entreprises, ainsi que dans l’administration de serveurs web.</p>
+          </div>
+        </div>
+      </div>
+      <div class="parallax-container valign-wrapper">
+        <div class="section no-pad-bot container">
+          <div class="row valign center-align">
+            <h5 class="header col s12">Contact</h5>
+            <form class="" action="index.html" method="post">
+              <div class="row">
+                <div class="input-field col s6">
+                  <input id="first_name" type="text" class="validate">
+                  <label for="first_name">First Name</label>
+                </div>
+                <div class="input-field col s6">
+                  <input id="last_name" type="text" class="validate">
+                  <label for="last_name">Last Name</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <textarea id="textarea1" class="materialize-textarea"></textarea>
+                  <label for="textarea1">Message</label>
+                </div>
+              </div>
+              <div class="row">
+                <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                  <i class="fa fa-arrow-right right"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="parallax"><img src="images/info/admission-pexels-photo-a94344.jpeg" alt=""></div>
+      </div>
+
+    </main>
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+            <div class="col l2 s12">
+              <h5 class="white-text">Adresses</h5>
+              <ul>
+                <li><a class="grey-text text-lighten-3" href="#!">Ste-Croix</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Yverdon</a></li>
+
+              </ul>
+            </div>
+            <div class="col l2 offset-l2 s12">
+              <h5 class="white-text">Contact</h5>
+              <ul>
+                <li><a class="grey-text text-lighten-3" href="#!">Messagerie</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Intranet</a></li>
+              </ul>
+            </div>
+            <div class="col l2 offset-l4 s12">
+              <i class="fa fa-arrow-circle-up fa-5x scroll-top" ></i>
+            </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+          <div class="container">
+               	&copy; CPNV-ES
+          </div>
+      </div>
+    </footer>
+
+    <script type="application/javascript" src="bundle.js" charset="utf-8"></script>
+    <script type="text/javascript">
+
+
+    </script>
+    </body>
+</html>

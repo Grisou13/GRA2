@@ -14,18 +14,23 @@ module.exports = class NavBar{
 
     toggleOff.addEventListener("click",(e)=>{
       document.querySelectorAll(nav).forEach((target)=>{
-        if(!target.classList.contains("animated"))target.classList.add("animated")
 
         if(!toggleOff.classList.contains("animated"))toggleOff.classList.add("animated");
-        target.classList.remove("bounceInDown");
-        target.classList.add("fadeOut");
+        this.toggleOff(target);
         toggleIn.classList.remove("bounceOutDown");
         toggleIn.classList.add("bounceInUp");
-        target.classList.remove("show")
-
         onToggleInCb(toggleIn,target);
       })
     })
+  }
+  toggleIn(el){
+
+  }
+  toggleOff(el){
+    if(!el.classList.contains("animated"))el.classList.add("animated")
+    el.classList.remove("bounceInDown");
+    el.classList.add("fadeOut");
+    el.classList.remove("show")
   }
   constructor(){
     //nav pushpin
@@ -34,6 +39,18 @@ module.exports = class NavBar{
     // })
     //naviagtion toggles
     this.applyNavToggle(document.querySelector(".nav-fix"),document.querySelector(".nav .nav-toggle"),(on,target)=>{},()=>{});
+    document.addEventListener("keyup",(e)=>{
+      if(e.keyCode === 27)
+      {
+        return;
+        var nav = document.querySelector(".nav.show");
+        if(nav !== null)
+        {
+          document.querySelector(".nav-toggle[data-toggle='#"+nav.id+"']")
+          this.toggleOff(nav);
+        }
+      }
+    })
     // document.querySelectorAll(".nav-toggle").forEach((el)=>{
     //   var nav = el.dataset.target;
     //   document.querySelectorAll(nav).forEach((nav_el)=>{

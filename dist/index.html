@@ -80,7 +80,16 @@
       <div id="progress"></div>
     </div>
 
+    <!-- fixed nav -->
+    <div class="nav-fix" data-target="#main-nav">
+      <nav class="pinnable">
+        <div class="nav-wrapper">
+          <img src="/images/logo.svg"  class="logo" alt="">
+          <span class="nav-toggle"><i class="fa fa-caret-down fa-5x"></i></span>
+        </div>
+      </nav>
 
+    </div>
     <!-- hero -->
     <div class="hero">
       <!--<div class="hero-background">
@@ -94,7 +103,6 @@
       <div class="container center-align">
         <div class="row">
           <div class="col m6 s12">
-
           </div>
           <div class="col m6 s12">
             <h1>Formation en école supérieur</h1>
@@ -102,16 +110,7 @@
         </div>
       </div>
     </div>
-    <!-- fixed nav -->
-    <div class="nav-fix" data-target="#main-nav">
-      <nav class="pinnable">
-        <div class="nav-wrapper">
-          <img src="images/logo-cpnv.png" class="logo" alt="">
-          <span class="nav-toggle"><i class="fa fa-caret-down fa-5x"></i></span>
-        </div>
-      </nav>
 
-    </div>
     <!-- Offscreen nav -->
     <div id="main-nav" class="nav">
       <span class="nav-toggle" data-target="#main-nav"><i class="fa fa-times fa-3x"></i></span>
@@ -128,8 +127,9 @@
         </div>
         <div class="align-center row">
           <ul class="links col s12">
-            <li><a class="link" href="index.html">Accueil</a></li>
-            <li><a class="link active" href="info.html">Info</a></li>
+            <li><a class="link active" href="index.html">Accueil</a></li>
+            <li><a class="link" href="formation.html">Formation</a></li>
+            <li><a class="link" href="stage.html">Stages</a></li>
           </ul>
         </div>
       </div>
@@ -137,17 +137,19 @@
     <!-- bubbles -->
     <main class="container main">
         <div class="bubbles">
-          <div class=" bubble-container" id="bubble-fil" data-text="Filières">
+          <div class="bubble-container" id="bubble-formation" >
+            <div class="bubble-center bubble-big"><a href="#" class="bubble-link">Le CPNV</a></div>
+            <div data-connect="#bubble-formation" class="bubble-small bubble--first"><a class="bubble-link" href="/stage.html">Stages</a></div>
+            <div data-connect="#bubble-formation" class="bubble-small bubble--second"><a class="bubble-link" href="/stage.html">Contact</a></div>
+            <div data-connect="#bubble-formation" class="bubble-small bubble--third"><a class="bubble-link" href="/admission.html">Admission</a></div>
 
-            <div data-connect="#bubble-fil" class="bubble bubble-small bubble--first" data-text="Meca"><a class="bubble-link" href="/filiaire.html#meca"></a></div>
-            <div data-connect="#bubble-fil" class="bubble bubble-small bubble--second" data-text="Info"><a class="bubble-link" href="/filiaire.html#info"></a></div>
-            <div data-connect="#bubble-fil" class="bubble bubble-small bubble--third" data-text="System"><a class="bubble-link" href="/filiaire.html#system"></a></div>
-            <div class="bubble-center bubble-big"></div>
           </div>
+          <div class=" bubble-container" id="bubble-fil">
+            <div class="bubble-center bubble-big"><a href="#"class="bubble-link">Les formations</a></div>
+            <div data-connect="#bubble-fil" class="bubble bubble-small bubble--first"><a class="bubble-link" href="/formation.html#meca">Meca</a></div>
+            <div data-connect="#bubble-fil" class="bubble bubble-small bubble--second"><a class="bubble-link" href="/formation.html#info">Info</a></div>
+            <div data-connect="#bubble-fil" class="bubble bubble-small bubble--third"><a class="bubble-link" href="/formation.html#system">Systeme</a></div>
 
-          <div class="bubble-container" id="bubble-formation" data-text="Formations">
-            <div class="bubble-center bubble-big"></div>
-            <div data-connect="#bubble-formation" class="bubble-small bubble--first" data-text="Plan de formation"><a class="bubble-link" href="/formation.html"></a></div>
           </div>
 
         </div>
@@ -158,33 +160,36 @@
     <footer class="page-footer">
       <div class="container">
         <div class="row">
-            <div class="col l6 s12">
-              <h5 class="white-text">Footer Content</h5>
-              <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-            </div>
-            <div class="col l4 offset-l2 s12">
-              <h5 class="white-text">Links</h5>
+            <div class="col l2 s12">
+              <h5 class="white-text">Adresses</h5>
               <ul>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Ste-Croix</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Yverdon</a></li>
+
               </ul>
+            </div>
+            <div class="col l2 offset-l2 s12">
+              <h5 class="white-text">Contact</h5>
+              <ul>
+                <li><a class="grey-text text-lighten-3" href="#!">Messagerie</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Intranet</a></li>
+              </ul>
+            </div>
+            <div class="col l2 offset-l4 s12">
+              <i class="fa fa-arrow-circle-up fa-5x scroll-top" ></i>
             </div>
         </div>
       </div>
       <div class="footer-copyright">
           <div class="container">
                	&copy; CPNV-ES
-                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
           </div>
       </div>
     </footer>
 
     <script type="application/javascript" src="bundle.js" charset="utf-8"></script>
     <script type="text/javascript">
-      var config = window.ParticleJsConf
-      particlesJS('hero-background', config);
+      var h = new window.hero;
     </script>
     </body>
 </html>

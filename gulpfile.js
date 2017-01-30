@@ -99,7 +99,7 @@ gulp.task('browsersync', function() {
   gulp.watch("./dist/*.html").on('change', browserSync.reload);
 });
 
-gulp.task('sass', function () {
+gulp.task('sass', ["copy-fonts"], function () {
   return gulp.src('./src/sass/app.sass')
         .pipe(sourcemaps.init())
 
@@ -117,7 +117,7 @@ gulp.task('watch-sass', function () {
 });
 
 gulp.task('copy-fonts', function () {
-  return gulp.src(['fonts/**/*',paths.fontawesome + "fonts/**.*", paths.bootstrap + "fonts/bootstrap/**.*"])
+  return gulp.src(['fonts/**/*',paths.fontawesome + "fonts/**.*", paths.material+"fonts/roboto/*.*"])
   //.pipe(gulp.dest('src/fonts/')) //for dev
   .pipe(gulp.dest('dist/fonts/'));
 });

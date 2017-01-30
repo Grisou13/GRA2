@@ -1,7 +1,4 @@
-// .parallax
-//   @at-root
-//   & img, .image--blurred
-//     filter: blur(4px) brightness(45%) contrast(90%) grayscale(33%)
+//configures the parralax system to fit on our pages
 .parallax-container
   min-height: 380px
   line-height: 0
@@ -9,3 +6,8 @@
   z-index: 1
   & .header
     text-transform: uppercase
+.parallax img
+    @media #{$small-and-down}
+      max-width: 200%
+    @media #{$medium-and-up}
+      width: 100%

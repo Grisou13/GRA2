@@ -1,22 +1,14 @@
-//override vendor configs
-//@import "config/bootstrap"
-// @import "materialize/components/mixins"
-// @import "materialize/components/colors"
-// @import "config/materialize"
-@import "config/fa"
-//stuff
-@import "config/colors"
+//stuff... goes first
+
 @import "config/vars"
+//ovveride vendors
+//@import "config/material_colors"
+@import "config/materialize"
+@import "config/fa"
+
 //vendors ...
-// http://getbootstrap.com
-//@import "bootstrap"
 // http://materializecss.com
 @import "materialize"
-.parallax img
-    @media #{$small-and-down}
-      max-width: 200%
-    @media #{$medium-and-up}
-      width: 100%
 
 // http://fontawesome.io/icons/
 @import "font-awesome"
